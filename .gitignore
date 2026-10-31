@@ -1,0 +1,15 @@
+node_modules
+dist
+.vercel
+# passwords — kabhi GitHub par na jaayein
+.env
+.env.*
+!.env.example
+server/.env
+# database backup (customers ka data)
+server/backup/
+*.sql.bak
+# purani HTML website aur khaam tasveer
+html-version/
+be5fd133-*.jpg
+WhatsApp Image*
