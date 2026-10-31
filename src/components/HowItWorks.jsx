@@ -7,7 +7,7 @@ const STEPS = [
 const SERVICES = [
   ["🍽", "Catering", "Desi, BBQ, Chinese and Continental menus with live counters and desserts."],
   ["✿", "Stage & Décor", "Fresh floral stages, entrances, table décor and themed setups."],
-  ["✦", "Lighting & Sound", "Elegant lighting, fairy lights, sound systems and DJ arrangements."],
+  ["✦", "Lighting", "Elegant stage lighting, fairy lights and chandeliers for every theme."],
   ["☎", "Full Coordination", "One team from first call to the last guest — no stress for your family."],
 ];
 

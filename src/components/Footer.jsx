@@ -16,7 +16,7 @@ const COLUMNS = [
   },
   {
     title: "Services",
-    links: ["Catering", "Stage & Floral Décor", "Lighting & Sound", "Wedding Invitations", "Full Event Management"],
+    links: ["Catering", "Stage & Floral Décor", "Lighting", "Wedding Invitations", "Full Event Management"],
     href: "#our-services",
   },
   {

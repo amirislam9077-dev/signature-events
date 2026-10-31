@@ -79,12 +79,6 @@ export const SERVICES = [
     gallery: ["1606471191009-63994c53433b", "1616734755909-bb016ce64930", "1724218012292-5548214cc2d2", "1599487488170-d11ec9c172f0", "1773209927898-a0a7e0a13125", "1776267890245-a54746d62d1a", "1565898094840-7e408a6f361d", "1708782341231-426344114ace"],
   },
   {
-    slug: "sound-dj", name: "Sound & DJ", img: "1774814305802-12849b9ccc89",
-    intro: "Professional sound systems and DJs for Mehndi nights, Barat entries and receptions — plus dhol, mics and stage lighting.",
-    includes: ["DJ with playlist planning", "Sound system & mics", "Dhol players", "Stage & dance-floor lighting", "Barat entry music", "Backup equipment"],
-    gallery: ["1774814305802-12849b9ccc89", "1618107095181-e3ba0f53ee59", "1620704087652-f4f843f04e6b", "1784019841755-3e1461f1729b", "1699616409365-4abeb26630b7", "1492684223066-81342ee5ff30"],
-  },
-  {
     slug: "photographer", name: "Photographer", img: "1747847471528-7b95ea7a4c39",
     intro: "Cinematic bridal portraits and candid moments shot on the latest mirrorless cameras, gimbals and drones — from Nikah to Rukhsati, delivered as an edited album.",
     includes: ["Cinematic bridal & couple portraits", "Latest mirrorless cameras & lighting", "Drone aerial photos (4K)", "Edited high-res online gallery", "Luxury printed album", "Pre-wedding shoot"],
