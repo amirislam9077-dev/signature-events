@@ -9,7 +9,7 @@ const HIGHLIGHTS = [
   ["Across", "Pakistan"],
 ];
 
-export default function Hero({ filters, onSearch }) {
+export default function Hero({ filters, onSearch, planOpen, onPlanOpen, onPlanClose }) {
   const [form, setForm] = useState(filters);
   const [callback, setCallback] = useState(false);
 
@@ -21,8 +21,17 @@ export default function Hero({ filters, onSearch }) {
 
   const submit = (e) => {
     e.preventDefault();
+    onPlanClose();
     onSearch(form, callback);
   };
+
+  // popup: Esc se band
+  useEffect(() => {
+    if (!planOpen) return;
+    const onKey = (e) => e.key === "Escape" && onPlanClose();
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [planOpen, onPlanClose]);
 
   return (
     <section className="hero" id="home">
@@ -42,9 +51,18 @@ export default function Hero({ filters, onSearch }) {
               <div key={top + bottom}><strong>{top}</strong><span>{bottom}</span></div>
             ))}
           </div>
-        </div>
 
+          <div className="hero__btns">
+            <button type="button" className="btn btn--gold" onClick={onPlanOpen}>✦ Plan Your Event</button>
+            <a className="btn btn--outline-light" href="#packages">View Packages</a>
+          </div>
+        </div>
+      </div>
+
+      {/* "Plan Your Event" — ab popup mein, button dabane par khulta hai */}
+      <div className={`plan-pop ${planOpen ? "is-open" : ""}`} onClick={(e) => e.target === e.currentTarget && onPlanClose()}>
         <form className="search" onSubmit={submit}>
+          <button type="button" className="plan-pop__x" onClick={onPlanClose} aria-label="Close">×</button>
           <h3 className="search__title">Plan Your Event</h3>
           <div className="search__field">
             <label htmlFor="sLocation">City</label>

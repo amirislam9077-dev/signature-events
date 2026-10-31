@@ -561,3 +561,20 @@ h2 { font-size: clamp(1.6rem, 2.6vw, 2.15rem); }
 .feature__icon { width: 40px; height: 40px; font-size: 1.1rem; }
 .invite { aspect-ratio: 1 / 1; }
 #invitations .section__head { margin-bottom: 20px; }
+
+/* ===== "Plan Your Event" popup ===== */
+.hero__content { grid-template-columns: 1fr; }
+.hero__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.plan-pop { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center; padding: 20px; background: rgba(0,0,0,.6); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
+.plan-pop.is-open { opacity: 1; visibility: visible; }
+.plan-pop .search { position: relative; width: 100%; max-width: 380px; background: rgba(11,11,12,.92); transform: translateY(16px); transition: transform .25s; }
+.plan-pop.is-open .search { transform: none; }
+.plan-pop__x { position: absolute; top: 8px; right: 12px; border: 0; background: none; color: var(--gold-light); font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.nav__plan { color: var(--gold); font-weight: 600; }
+@media (max-width: 960px) { .hero__content { grid-template-columns: 1fr; } }
+.nav__link { white-space: nowrap; }
+@media (max-width: 1400px) and (min-width: 961px) {
+  .nav__link { padding: 10px 8px; font-size: .86rem; }
+  .nav__cta { padding: 8px 14px; font-size: .86rem; }
+  .logo--md .logo__sub { display: none; }
+}

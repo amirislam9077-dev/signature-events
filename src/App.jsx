@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { COMPANY, timingText, typeLabel } from "./data";
 import { postJSON } from "./api";
 import Header from "./components/Header";
@@ -34,6 +34,9 @@ export default function App() {
   }, []);
 
   const scrollToPackages = () => document.getElementById("packages")?.scrollIntoView();
+
+  const [planOpen, setPlanOpen] = useState(false);
+  const closePlan = useCallback(() => setPlanOpen(false), []);
 
   const handleSearch = (next, callback) => {
     setFilters(next);
@@ -103,9 +106,9 @@ export default function App() {
 
   return (
     <>
-      <Header onQuote={() => setQuoteFor("your event")} onJoin={() => setVendorOpen(true)} />
+      <Header onQuote={() => setQuoteFor("your event")} onJoin={() => setVendorOpen(true)} onPlan={() => setPlanOpen(true)} />
       <main>
-        <Hero filters={filters} onSearch={handleSearch} />
+        <Hero filters={filters} onSearch={handleSearch} planOpen={planOpen} onPlanOpen={() => setPlanOpen(true)} onPlanClose={closePlan} />
         <BlogCarousel />
         <About onQuote={() => setQuoteFor("your event")} />
         <Services city={filters.city} onQuote={setQuoteFor} />

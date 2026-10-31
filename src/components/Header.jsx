@@ -10,7 +10,7 @@ const INVITE_LINKS = [
   ["Digital vs Printed", "#digital-vs-printed"],
 ];
 
-export default function Header({ onQuote, onJoin }) {
+export default function Header({ onQuote, onJoin, onPlan }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
@@ -73,6 +73,7 @@ export default function Header({ onQuote, onJoin }) {
             </div>
           </div>
           <a href="#faq" className="nav__link" onClick={close}>FAQ</a>
+          <button className="nav__link nav__plan" type="button" onClick={() => { close(); onPlan(); }}>✦ Plan Your Event</button>
           <button className="nav__link nav__vendor" type="button" onClick={() => { close(); onJoin(); }}>
             Join as Vendor
           </button>
