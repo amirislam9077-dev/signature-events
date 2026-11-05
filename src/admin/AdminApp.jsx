@@ -37,6 +37,7 @@ const daysUntil = (d) => {
   if (diff === 0) return "Today";
   if (diff === 1) return "Tomorrow";
   if (diff > 1) return `in ${diff} days`;
+  if (diff === -1) return "Yesterday";
   return `${-diff} days ago`;
 };
 const types = (csv) => (csv ? csv.split(",").map(typeLabel).join(", ") : "-");

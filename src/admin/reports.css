@@ -1,18 +1,18 @@
 /* ===== Admin layout: baayein sidebar ===== */
 .ad-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); min-height: 100vh; }
 .ad-side { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; background: var(--black); border-right: 2px solid var(--gold); padding: 18px 14px; overflow-y: auto; }
-.ad-side__brand { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 4px 6px 18px; border-bottom: 1px solid rgba(212,175,95,.25); }
+.ad-side__brand { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 4px 6px 18px; border-bottom: 1px solid rgba(200,202,211,.25); }
 .ad-side .logo__crown { background: var(--black); }
 .ad-side .logo__name { font-size: 1.3rem; }
 .ad-side__nav { display: flex; flex-direction: column; gap: 4px; margin-top: 16px; flex: 1; }
 .ad-side__nav button, .ad-side__foot a, .ad-side__foot button { display: flex; align-items: center; gap: 12px; width: 100%; padding: 11px 12px; border: 0; border-radius: 10px; background: none; color: rgba(255,255,255,.78); font: inherit; font-weight: 600; font-size: .92rem; text-align: left; cursor: pointer; transition: background .15s, color .15s; }
-.ad-side__nav button:hover, .ad-side__foot a:hover, .ad-side__foot button:hover { background: rgba(212,175,95,.1); color: #fff; }
+.ad-side__nav button:hover, .ad-side__foot a:hover, .ad-side__foot button:hover { background: rgba(200,202,211,.1); color: #fff; }
 .ad-side__nav button.is-active { background: var(--gold-grad); color: var(--black); }
 .ad-side__nav button.is-active .ad-badge { background: var(--black); color: var(--gold); }
 .ad-side__icon { width: 22px; text-align: center; }
 .ad-side__label { flex: 1; }
 .ad-side__nav .ad-badge { margin-left: 0; }
-.ad-side__foot { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid rgba(212,175,95,.25); }
+.ad-side__foot { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid rgba(200,202,211,.25); }
 
 .ad-layout .ad-main { max-width: none; width: 100%; padding: 22px 28px 60px; }
 .ad-page-head { margin-bottom: 18px; }
@@ -115,11 +115,11 @@
 
 .rp-chart__wrap { position: relative; }
 .rp-chart__wrap svg { width: 100%; height: auto; display: block; overflow: visible; }
-.rp-grid { stroke: #ece6da; stroke-width: 1; }
+.rp-grid { stroke: #E3E6EC; stroke-width: 1; }
 .rp-axis { stroke: #bdb5a4; stroke-width: 1; }
 .rp-tick { fill: var(--muted); font-size: 11px; font-family: var(--sans); }
-.rp-bar { fill: #a8832f; transition: fill .15s; }
-.rp-bar.is-hover { fill: #8a6b22; }
+.rp-bar { fill: #173159; transition: fill .15s; }
+.rp-bar.is-hover { fill: #002E5D; }
 .rp-tip { position: absolute; top: 0; transform: translateX(-50%); pointer-events: none; background: var(--black); color: #fff; border-radius: 8px; padding: 6px 10px; font-size: .8rem; display: flex; flex-direction: column; align-items: center; white-space: nowrap; box-shadow: 0 6px 16px rgba(0,0,0,.2); }
 .rp-tip strong { color: var(--gold-light); font-size: .75rem; }
 .rp-tip small { color: #cfc8b8; font-size: .72rem; }
@@ -130,8 +130,8 @@
 .rp-hbars__top { display: flex; justify-content: space-between; gap: 10px; font-size: .86rem; }
 .rp-hbars__label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .rp-hbars__top b { white-space: nowrap; }
-.rp-hbars__track { height: 8px; background: #f3eee3; border-radius: 4px; overflow: hidden; }
-.rp-hbars__fill { height: 100%; background: #a8832f; border-radius: 4px; min-width: 2px; }
+.rp-hbars__track { height: 8px; background: #EEF0F4; border-radius: 4px; overflow: hidden; }
+.rp-hbars__fill { height: 100%; background: #173159; border-radius: 4px; min-width: 2px; }
 .rp-hbars small { font-size: .74rem; color: var(--muted); }
 
 .rp-split__rows { display: flex; flex-direction: column; gap: 10px; }

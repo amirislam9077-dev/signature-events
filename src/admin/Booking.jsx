@@ -50,13 +50,13 @@ function printBooking(e, form, items, totals) {
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>Booking #${e.id} — ${esc(e.name)}</title>
   <style>
     body{font-family:Arial,sans-serif;color:#1a1a1c;max-width:760px;margin:24px auto;padding:0 20px}
-    header{background:#0b0b0c;color:#d4af5f;text-align:center;padding:18px;border-bottom:3px solid #d4af5f}
+    header{background:#122135;color:#C8CAD3;text-align:center;padding:18px;border-bottom:3px solid #C8CAD3}
     header b{font-family:Georgia,serif;font-size:26px;letter-spacing:6px}header div{font-size:10px;letter-spacing:3px;color:#e8e2d4;margin-top:4px}
-    .meta{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;margin:18px 0;font-size:14px}.meta span{color:#8a6d2b;font-weight:bold}
-    h2{border-bottom:2px solid #d4af5f;padding-bottom:4px;margin-top:26px;font-family:Georgia,serif}
-    h3{margin:14px 0 4px;font-size:14px;color:#8a6d2b;text-transform:uppercase;letter-spacing:1px}
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;margin:18px 0;font-size:14px}.meta span{color:#173159;font-weight:bold}
+    h2{border-bottom:2px solid #C8CAD3;padding-bottom:4px;margin-top:26px;font-family:Georgia,serif}
+    h3{margin:14px 0 4px;font-size:14px;color:#173159;text-transform:uppercase;letter-spacing:1px}
     table{width:100%;border-collapse:collapse;font-size:14px}td{padding:6px 4px;border-bottom:1px solid #eee}.n{text-align:right;white-space:nowrap}
-    small{color:#777}.tot td{border:0;padding:4px}.tot .g td{font-size:17px;font-weight:bold;border-top:2px solid #0b0b0c}
+    small{color:#777}.tot td{border:0;padding:4px}.tot .g td{font-size:17px;font-weight:bold;border-top:2px solid #122135}
     footer{text-align:center;margin-top:30px;font-size:12px;color:#777}
     @media print{body{margin:0}}
   </style></head><body>

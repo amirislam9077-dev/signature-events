@@ -1,12 +1,12 @@
 /* ===== Service detail page (/services/...) ===== */
-.sp-top { position: sticky; top: 0; z-index: 50; background: rgba(11,11,12,.97); border-bottom: 1px solid rgba(212,175,95,.35); }
+.sp-top { position: sticky; top: 0; z-index: 50; background: rgba(18,33,53,.97); border-bottom: 1px solid rgba(200,202,211,.35); }
 .sp-top__inner { display: flex; justify-content: space-between; align-items: center; height: 80px; gap: 16px; }
 .sp-top__nav { display: flex; align-items: center; gap: 18px; }
 .sp-top__nav a { color: rgba(255,255,255,.85); font-weight: 500; }
 .sp-top__nav a:hover { color: var(--gold); }
 
 .sp-hero { position: relative; min-height: 46vh; display: flex; align-items: flex-end; background-size: cover; background-position: center; color: #fff; }
-.sp-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,11,12,.95) 0%, rgba(11,11,12,.55) 55%, rgba(11,11,12,.25) 100%); }
+.sp-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,33,53,.95) 0%, rgba(18,33,53,.55) 55%, rgba(18,33,53,.25) 100%); }
 .sp-hero__content { position: relative; padding-top: 80px; padding-bottom: 56px; }
 .sp-crumb { display: inline-block; font-family: var(--display); font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
 .sp-crumb::after { content: " ›"; }
@@ -34,20 +34,20 @@
 .sp .service__body { padding: 10px 12px 12px; }
 .sp .service__body h3 { font-size: .9rem; }
 .sp-gallery__item:hover img { transform: scale(1.05); opacity: .92; }
-.sp-gallery__item::after { content: "⤢"; position: absolute; right: 12px; bottom: 12px; width: 34px; height: 34px; border-radius: 50%; background: rgba(11,11,12,.75); color: var(--gold); display: grid; place-items: center; opacity: 0; transition: opacity .2s; }
+.sp-gallery__item::after { content: "⤢"; position: absolute; right: 12px; bottom: 12px; width: 34px; height: 34px; border-radius: 50%; background: rgba(18,33,53,.75); color: var(--gold); display: grid; place-items: center; opacity: 0; transition: opacity .2s; }
 .sp-gallery__item:hover::after { opacity: 1; }
 
 .sp-lightbox { position: fixed; inset: 0; z-index: 300; background: rgba(5,5,6,.94); display: grid; place-items: center; padding: 40px 70px; }
 .sp-lightbox img { max-width: 100%; max-height: 86vh; border-radius: 10px; box-shadow: 0 30px 60px rgba(0,0,0,.6); }
-.sp-lightbox__x { position: absolute; top: 18px; right: 22px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(212,175,95,.5); background: none; color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer; }
-.sp-lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(212,175,95,.5); background: rgba(11,11,12,.6); color: var(--gold); font-size: 2rem; line-height: 1; cursor: pointer; }
+.sp-lightbox__x { position: absolute; top: 18px; right: 22px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(200,202,211,.5); background: none; color: #fff; font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.sp-lightbox__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(200,202,211,.5); background: rgba(18,33,53,.6); color: var(--gold); font-size: 2rem; line-height: 1; cursor: pointer; }
 .sp-lightbox__nav:hover, .sp-lightbox__x:hover { background: var(--gold); color: var(--black); }
 .sp-lightbox__nav--prev { left: 14px; }
 .sp-lightbox__nav--next { right: 14px; }
 .sp-lightbox__count { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.7); font-size: .88rem; }
 
 .sp-cta { grid-template-columns: 1fr auto; }
-.sp-foot { background: var(--black); color: rgba(255,255,255,.65); padding: 26px 0; border-top: 1px solid rgba(212,175,95,.25); font-size: .88rem; }
+.sp-foot { background: var(--black); color: rgba(255,255,255,.65); padding: 26px 0; border-top: 1px solid rgba(200,202,211,.25); font-size: .88rem; }
 .sp-foot__inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 
 .sp-missing { min-height: 100vh; display: grid; place-items: center; align-content: center; gap: 20px; background: var(--black); color: #fff; text-align: center; }
@@ -63,15 +63,15 @@
 }
 
 /* add-on (jaise Drone coverage) */
-.sp-addon { background: radial-gradient(ellipse at 20% 50%, #22201a 0%, var(--black) 70%); color: #fff; padding: 44px 0; border-top: 1px solid rgba(212,175,95,.3); border-bottom: 1px solid rgba(212,175,95,.3); }
+.sp-addon { background: radial-gradient(ellipse at 20% 50%, #1c3355 0%, var(--black) 70%); color: #fff; padding: 44px 0; border-top: 1px solid rgba(200,202,211,.3); border-bottom: 1px solid rgba(200,202,211,.3); }
 .sp-addon__inner { display: grid; grid-template-columns: minmax(260px, 420px) 1fr; gap: 40px; align-items: center; }
-.sp-addon img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(212,175,95,.4); }
+.sp-addon img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(200,202,211,.4); }
 .sp-addon h2 { color: #fff; font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 10px; }
 .sp-addon p { color: rgba(255,255,255,.78); margin-bottom: 14px; max-width: 560px; }
 .sp-addon ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-bottom: 20px; color: var(--gold-light); font-size: .92rem; }
 @media (max-width: 860px) { .sp-addon__inner { grid-template-columns: 1fr; } .sp-addon ul { grid-template-columns: 1fr; } }
 
-.sp-back { border: 1px solid rgba(212,175,95,.55); background: none; color: var(--gold-light); font: inherit; font-weight: 600; padding: 8px 16px; border-radius: 999px; cursor: pointer; }
+.sp-back { border: 1px solid rgba(200,202,211,.55); background: none; color: var(--gold-light); font: inherit; font-weight: 600; padding: 8px 16px; border-radius: 999px; cursor: pointer; }
 .sp-back:hover { background: var(--gold); color: var(--black); }
 @media (max-width: 640px) { .sp-back { padding: 7px 12px; font-size: .85rem; } }
 

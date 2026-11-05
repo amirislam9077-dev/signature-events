@@ -47,19 +47,19 @@ const mailer = env.SMTP_HOST && env.SMTP_USER && env.SMTP_PASS
 const FROM = env.MAIL_FROM || `"${BRAND}" <${env.SMTP_USER}>`;
 
 function layout(title, bodyHtml) {
-  return `<!doctype html><html><body style="margin:0;background:#f4f1ea;font-family:Arial,Helvetica,sans-serif">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f1ea;padding:24px 0"><tr><td align="center">
-    <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e6dcc6">
-      <tr><td style="background:#0b0b0c;padding:26px;text-align:center;border-bottom:3px solid #d4af5f">
-        <div style="font-family:Georgia,serif;font-size:28px;letter-spacing:6px;color:#d4af5f">SIGNATURE</div>
+  return `<!doctype html><html><body style="margin:0;background:#F3F5F8;font-family:Arial,Helvetica,sans-serif">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#F3F5F8;padding:24px 0"><tr><td align="center">
+    <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #DDE1E8">
+      <tr><td style="background:#122135;padding:26px;text-align:center;border-bottom:3px solid #C8CAD3">
+        <div style="font-family:Georgia,serif;font-size:28px;letter-spacing:6px;color:#C8CAD3">SIGNATURE</div>
         <div style="font-size:10px;letter-spacing:3px;color:#e8e2d4;margin-top:6px">CATERING &amp; EVENT MANAGEMENT</div>
       </td></tr>
       <tr><td style="padding:28px 30px;color:#1a1a1c;font-size:15px;line-height:1.6">
-        <h2 style="margin:0 0 16px;font-family:Georgia,serif;color:#0b0b0c">${title}</h2>
+        <h2 style="margin:0 0 16px;font-family:Georgia,serif;color:#122135">${title}</h2>
         ${bodyHtml}
       </td></tr>
-      <tr><td style="background:#0b0b0c;color:#bdb6a6;font-size:12px;text-align:center;padding:16px">
-        <span style="color:#d4af5f;font-style:italic">Every Occasion, Our Signature Touch</span><br>
+      <tr><td style="background:#122135;color:#C8CAD3;font-size:12px;text-align:center;padding:16px">
+        <span style="color:#C8CAD3;font-style:italic">Every Occasion, Our Signature Touch</span><br>
         ☎ ${esc(BRAND_PHONE)} · ✉ ${esc(env.ADMIN_EMAIL || env.SMTP_USER || "")}
       </td></tr>
     </table>
@@ -68,8 +68,8 @@ function layout(title, bodyHtml) {
 
 function rowsTable(rows) {
   return `<table cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse;font-size:14px">
-    ${rows.filter(([, v]) => v).map(([k, v], i) => `<tr style="background:${i % 2 ? "#ffffff" : "#faf6ec"}">
-      <td style="width:38%;color:#8a6d2b;font-weight:bold;border-bottom:1px solid #eee">${esc(k)}</td>
+    ${rows.filter(([, v]) => v).map(([k, v], i) => `<tr style="background:${i % 2 ? "#ffffff" : "#F3F5F8"}">
+      <td style="width:38%;color:#173159;font-weight:bold;border-bottom:1px solid #eee">${esc(k)}</td>
       <td style="border-bottom:1px solid #eee">${esc(v)}</td></tr>`).join("")}
   </table>`;
 }
@@ -123,7 +123,7 @@ export function notifyEnquiry(id, e) {
 
   const adminHtml = layout("New enquiry received", `${rowsTable(rows)}
     <p style="margin-top:20px">
-      <a href="tel:${esc(e.phone)}" style="background:#0b0b0c;color:#d4af5f;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold">Call</a>
+      <a href="tel:${esc(e.phone)}" style="background:#122135;color:#C8CAD3;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold">Call</a>
       ${wa ? `&nbsp;<a href="https://wa.me/${wa}" style="background:#25d366;color:#fff;padding:10px 18px;border-radius:20px;text-decoration:none;font-weight:bold">WhatsApp</a>` : ""}
     </p>`);
 

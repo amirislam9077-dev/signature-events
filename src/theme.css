@@ -1,0 +1,145 @@
+/* ===== Theme: safed + navy + silver =====
+   --gold* naam purane hain; ab ye "accent" hain. Halke hisse par navy, gehre hisse par silver/safed.
+   Rang yahan badlein to poori site par badal jaate hain. */
+:root {
+  --black: #122135;      /* gehra navy */
+  --black-2: #173159;
+  --black-3: #002E5D;
+  --gold: #173159;
+  --gold-light: #173159;
+  --gold-dark: #173159;
+  --gold-grad: linear-gradient(#002E5D, #002E5D);
+  --on-accent: #ffffff;  /* accent button par text */
+  --cream: #F3F5F8;
+  --ink: #173159;
+  --muted: #5C6B82;
+  --line: #DDE1E8;
+  --radius: 6px;
+  --shadow: 0 8px 24px rgba(18, 33, 53, .08);
+  --shadow-lg: 0 18px 44px rgba(18, 33, 53, .18);
+  --serif: "Montserrat", "Segoe UI", sans-serif;
+  --display: "Montserrat", "Segoe UI", sans-serif;
+  --script: "Montserrat", "Segoe UI", sans-serif;
+  --sans: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+/* gehre (navy) hisse: yahan accent halka ho jaata hai */
+.hero, .section--dark, .about, .cta, .footer, .sp-hero, .sp-addon, .sp-foot, .sp-missing, .sp-lightbox,
+.search, .slide, .cat, .invite, .step, .toast, .music-btn, .back-admin, .btn--primary, .badge, .avatar,
+.nav__menu, .ms__menu, .compare__row--head, .sp-includes span, .highlights__frame,
+.service:hover .service__tag, .service__quote:hover, .service__count,
+.ad-side, .ad-top, .ad-login, .ad-login__box, .ad-booking-cta, .ad-stat--gold, .ad-table th, .bkp-head,
+.rp-kpi--hero, .rp-tip, .bkp-seg button.is-active, .cat-switch button.is-active, .rp-presets button.is-active,
+.bkp-group__head h4 small {
+  --gold: #C8CAD3;
+  --gold-light: #ffffff;
+  --gold-dark: #C8CAD3;
+  --gold-grad: linear-gradient(#ffffff, #ffffff);
+  --on-accent: #122135;
+}
+
+/* ----- Fonts ----- */
+body { font-size: 15px; line-height: 1.6; }
+
+/* badi headings: chaude, bold CAPITAL harf */
+.hero h1, .section h2, .cta h2, .sp-hero h1, .sp-addon h2, .about__text h2 {
+  font-family: var(--display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  line-height: 1.15;
+}
+.hero h1 { font-size: clamp(1.9rem, 4.6vw, 3.9rem); max-width: 960px; }
+.hero h1 em { font-family: var(--display); font-style: normal; font-weight: 800; font-size: 1em; background: none; -webkit-background-clip: border-box; background-clip: border-box; color: #C8CAD3; }
+.section h2, .cta h2, .sp-addon h2, .about__text h2 { font-size: clamp(1.15rem, 2.2vw, 1.8rem); }
+.sp-hero h1 { font-size: clamp(1.6rem, 3.6vw, 2.8rem); }
+h3, h4 { font-family: var(--display); font-weight: 700; }
+.eyebrow { font-family: var(--display); font-weight: 700; font-size: .72rem; letter-spacing: .24em; }
+
+/* chhoti grey line heading ke neeche */
+.section__head h2::after { width: 44px; height: 4px; background: #A9ADB6; margin-top: 12px; }
+.section__head--center h2::after { margin-left: auto; margin-right: auto; }
+
+.hero__stats strong, .logo__name, .logo__sub, .logo__s, .step__num { font-family: var(--display); }
+.hero__stats strong { font-weight: 700; font-size: .95rem; letter-spacing: .04em; text-transform: uppercase; }
+.logo__name { font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: 1.25rem; }
+.logo__sub { color: var(--gold-light); font-weight: 600; }
+.logo__s { font-weight: 800; }
+.footer__tagline { font-family: var(--sans); font-style: italic; font-weight: 600; font-size: 1.05rem; }
+
+/* ----- Header: safed patti, navy menu ----- */
+.header, .header.is-scrolled { background: #ffffff; backdrop-filter: none; box-shadow: 0 1px 0 var(--line), 0 6px 18px rgba(18, 33, 53, .06); }
+.nav__link { color: #173159; font-family: var(--sans); font-weight: 700; font-size: .9rem; }
+.nav__link:hover { color: #002E5D; text-decoration: underline; text-underline-offset: 5px; }
+.header .logo__crown, .sp-top .logo__crown { background: #ffffff; }
+.footer .logo__crown, .sp-foot .logo__crown { background: var(--black); }
+.logo__monogram { border-color: var(--gold); }
+.nav__menu a { color: rgba(255, 255, 255, .88); }
+.nav__menu a:hover { background: rgba(200, 202, 211, .16); color: #ffffff; }
+
+.sp-top { background: #ffffff; border-bottom: 1px solid var(--line); }
+.sp-top__nav a { color: #173159; font-weight: 700; }
+.sp-top__nav a:hover { color: #002E5D; }
+.sp-back { color: #173159; border-color: #173159; }
+.sp-back:hover { background: #173159; color: #ffffff; }
+
+/* ----- Buttons: seedhe, kam gol ----- */
+.btn { border-radius: 4px; font-family: var(--sans); font-weight: 700; letter-spacing: .02em; }
+body .btn--gold, body .ad-btn--gold, body .ad-badge, body .bkp-seg span, body .bkp-chips button.is-active, body .ms__foot .ms__done {
+  color: var(--on-accent);
+  box-shadow: none;
+}
+.btn--gold:hover { filter: brightness(1.15); box-shadow: 0 8px 20px rgba(18, 33, 53, .25); }
+.btn--primary:hover { background: #002E5D; color: #ffffff; }
+.about .btn--primary { color: #122135; }
+.about .btn--primary:hover { background: #C8CAD3; color: #122135; }
+.btn--outline-light { border-color: #C8CAD3; color: #ffffff; }
+.btn--outline-light:hover { background: #ffffff; color: #122135; }
+.btn--ghost-dark { border-color: #C8CAD3; color: #ffffff; }
+.btn--ghost-dark:hover { background: #ffffff; color: #122135; }
+body .ad-btn { border-radius: 4px; }
+
+/* ----- Gehre sections ----- */
+.cta { background: #122135; border-top: 0; }
+.about { background: #122135; }
+.footer { background: #122135; border-top: 0; }
+.ad-login { background: #122135; }
+.section--dark { background: #122135; }
+.step { background: #173159; border-color: rgba(200, 202, 211, .25); }
+.feature h4 { color: #ffffff; }
+.search__title { color: #ffffff; }
+.review { border-top-color: #173159; }
+.review__stars { color: #173159; }
+.good { color: #002E5D; }
+.link-btn { color: #173159; }
+.cta__vendor .link-btn { color: #ffffff; }
+.bkp-card__add, .service__tag { background: rgba(23, 49, 89, .08); color: #173159; }
+.service:hover .service__tag { background: #173159; color: #ffffff; }
+.service__quote:hover { background: #173159; color: #ffffff; border-color: #173159; }
+.cat:hover, .cat.is-active { border-color: #C8CAD3; }
+
+/* mobile menu safed par navy */
+@media (max-width: 960px) {
+  .nav { background: #ffffff; border-top: 1px solid var(--line); }
+  .nav-open .header { background: #ffffff; }
+  .nav__menu { background: none; }
+  .nav__menu a { color: #173159; }
+  .nav__menu a:hover { background: var(--cream); color: #002E5D; }
+}
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.75rem; letter-spacing: .05em; }
+  .section h2, .cta h2, .sp-addon h2, .about__text h2 { letter-spacing: .05em; }
+}
+
+/* footer: lamba email na toote */
+.footer__grid { grid-template-columns: 1.5fr .9fr 1.1fr 1fr 1.5fr; gap: 32px; }
+.footer__grid a[href^="mailto"] { font-size: .84rem; word-break: normal; overflow-wrap: normal; white-space: nowrap; }
+@media (max-width: 1024px) { .footer__grid { grid-template-columns: 1fr 1fr 1fr; } }
+@media (max-width: 640px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+
+/* service page ki CSS baad mein load hoti hai — is liye "body" ke saath */
+body .sp-top { background: #ffffff; border-bottom: 1px solid var(--line); }
+body .sp-top__nav a { color: #173159; font-weight: 700; }
+body .sp-top__nav a:hover { color: #002E5D; }
+body .sp-back { color: #173159; border-color: #173159; border-radius: 4px; }
+body .sp-back:hover { background: #173159; color: #ffffff; }

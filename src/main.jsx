@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import "./theme.css";
 
 // /admin → admin panel, /services/<slug> → service ka page, baqi sab → website
 const AdminApp = lazy(() => import("./admin/AdminApp.jsx"));
